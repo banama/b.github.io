@@ -30,7 +30,7 @@ ol li { margin:0; padding:0; line-height:normal; zoom:1; }
 
 .top { width:100%; height:80px; margin:0 auto; padding: 0}
 
-.foot {width:1000px; height:100px; background:#ededed;}
+.foot {width:1000px; height:100px; }
 
 /*	default_index
 */
@@ -50,4 +50,4 @@ ol li { margin:0; padding:0; line-height:normal; zoom:1; }
 /*	default_post
 */
 .title {width: 100%; text-align: center; padding: 20px 0 20px 0;}
-.post_content {width: 700px; margin: 0 auto; }
+.post_content {width: 800px; margin: 0 auto; }
