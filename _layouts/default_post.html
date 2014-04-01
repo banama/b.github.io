@@ -8,19 +8,28 @@
 </head>
 <body>
 <div class="main">
-	<!--top-->
-	<div class="top"></div>
-
+	
 	<!--contents-->
 	<div class="title">
 		<h1>{{ page.title }}</h1>
-	</div>
-	<div class="post_content">
-		{{ content }}
+		<div class="nav">
+			<ul>
+				<a href="">About</a>
+				<a href="">Project</a>
+				<a href="">Book</a>
+				<a href="">Home</a>
+			</ul>	
+		</div>
 	</div>
 
-	<!--foot-->
-	<div class="foot"></div>
+	<div class="post_content">
+		{{ page.date | date_to_string }}<br/><hr><br>
+		{{ content }} 
+	</div>
 </div>
+
+<!--foot-->
+<div class="foot"></div>
+
 </body>
 </html>
