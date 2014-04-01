@@ -9,24 +9,44 @@
 <body>
 <div class="main">
 	<!--top-->
-	<div class="top"></div>
+	<div class="top">
+		<div class="name"><h1>Banama</h1></div>
+		<div class="nav">
+			<ul>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Book</li>
+				<li>Project</li>
+			</ul>	
+		</div>
+	</div>
 
 	<!--contents-->
 	<div class="contents">
 
-		<!--silder_l-->
+		<!--silder_r-->
 		<div class="slider_l">
-			{% for post in site.posts %}
-			<li>
-			  <a href="{{ post.url }}">
-			    <h3 > {{ post.title }} </h3>
-			  </a >
-			</li>
-			{% endfor %}
+			<div class="slnav">
+				<ul>	
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>	
+			</div>
 		</div>
 
-		<!--silder_r-->
+		<!--silder_l-->
 		<div class="slider_r">
+			<div class="content">
+				<ul>
+				{% for post in site.posts %}
+				<li>
+				 {{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a >
+				</li>
+				{% endfor %}
+				</ul>
+			</div>
 		</div>
 
 	</div>
