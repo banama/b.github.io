@@ -12,8 +12,9 @@
 		<!--silder_r-->
 		<div class="slider_l">
 			<div class="slnav">
-				<ul>	
-					<li>test</li>
+			<ul>	
+					<li><a href="{{ site.url }}/categories/science/">科学计算</a></li>
+					<li><a href="{{ site.url }}/categories/share/">分享</a></li>
 				</ul>	
 			</div>
 		</div>
@@ -21,13 +22,7 @@
 		<!--silder_l-->
 		<div class="slider_r">
 			<div class="content">
-				<ul>
-				{% for post in site.posts %}
-				<li>
-				 {{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a >
-				</li>
-				{% endfor %}
-				</ul>
+				{{ content }}
 			</div>
 		</div>
 

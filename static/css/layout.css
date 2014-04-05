@@ -67,6 +67,7 @@ ul li { margin:0; padding:0; line-height:normal;}
 			float: right;
 			overflow: hidden;
 			color: #333;
+			text-align: right;
 		}
 		.slnav ul li {
 			display: block;
