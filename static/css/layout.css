@@ -17,9 +17,7 @@ a, a:visited { text-decoration:none; }
 
 p { margin:0 0 1em 0; padding:0; line-height:250%; }
 ul { list-style-type:none;padding:0;}
-ul li { margin:0; padding:0; line-height:normal; list-style-type:none;}
-ol { margin:0 0 1em 19px; padding:0; line-height:0%; }
-ol li { margin:0; padding:0; line-height:normal; list-style-type:none;}
+ul li { margin:0; padding:0; line-height:normal;}
 
 /*----------------------------------------------------------------*/
 /*                               frame                            */
@@ -42,6 +40,7 @@ ol li { margin:0; padding:0; line-height:normal; list-style-type:none;}
 		color: #cccc99;
 		display: block;
 		float: right;
+		list-style-type:none;
 	}
 	.nav ul a {
 		color: #cccc99;
@@ -109,5 +108,5 @@ ol li { margin:0; padding:0; line-height:normal; list-style-type:none;}
 */
 .title {width: 900px; margin: 0 auto; padding: 20px 0 20px 0; color: #cc6633;}
 .post_content {width: 900px; margin: 0 auto; color: #333;}
-.post_content ul li { list-style-type:circle; }
+.post_content ul li { margin-left: 20px;}
 .disqus {width: 100%; float: left;}
