@@ -108,9 +108,12 @@ ul li { margin:0; padding:0; line-height:normal;}
 .foot p a {
 	display: inline-block;
 }
+
 /*	default_post
 */
 .title {width: 900px; margin: 0 auto; padding: 20px 0 20px 0; color: #cc6633;}
+
 .post_content {width: 900px; margin: 0 auto; color: #333;}
-.post_content ul { margin-left: 20px; list-style-type:circle;}
+	.post_content ul { margin-left: 30px; list-style-type:circle;}
+
 .disqus {width: 100%; float: left;}
