@@ -12,7 +12,9 @@
 		{{ page.date | date_to_string }}<br/><hr><br>
 		{{ content }} 
 	</div>
+	{% include disqus.html %}
 </div>
-<div class="main">{% include foot.html %}</div>
+<div class="main">{% include foot.html %}
+</div>
 </body>
 </html>
