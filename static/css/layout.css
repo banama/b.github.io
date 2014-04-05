@@ -109,4 +109,5 @@ ol li { margin:0; padding:0; line-height:normal; list-style-type:none;}
 */
 .title {width: 900px; margin: 0 auto; padding: 20px 0 20px 0; color: #cc6633;}
 .post_content {width: 900px; margin: 0 auto; color: #333;}
+.post_content ul li { list-style-type:circle; }
 .disqus {width: 100%; float: left;}
