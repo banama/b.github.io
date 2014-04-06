@@ -78,27 +78,7 @@ tests为collections，可以理解为关系数据库中的表，fileds中内容�
 
 在controller目录目录下建立tests.js,一个控制器文件包含两部分，一部分是路由，一部分是逻辑函数。
 <pre><code>
-sumeru.router.add(
-    {
-      pattern: '\/tests',
-      action: 'App.tests'
-    }
-  );
-  App.tests = sumeru.controller.create(function(env, session){
-    var getMsg = function() {
-      env.subscribe('pub-tests', function(testsCollection) {
-      session.bind('testList', {
-        data: testsCollection.find(),
-      });
-      });
-  }
-    env.onload = function() {
-    return [getMsg];
-    }
-    env.onrender = function(doRender){
-    doRender('tests', ['push', 'left']);
-  }
-  });
+s
 </code> </pre>  
 
 sumeru.router.add是增加路由，其中pattern是路径，action对应下面逻辑函数。
