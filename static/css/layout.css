@@ -15,7 +15,7 @@ body { margin:0; padding:0; background:#fff;
 a { display: block; color: #cc6633;}
 a, a:visited { text-decoration:none; }
 
-p { margin:0 0 1em 0; padding:0; line-height:250%; }
+p {padding:0px; margin: 0px; line-height:200%; }
 ul { padding:0;}
 ul li { margin:0; padding:0; line-height:normal;}
 
@@ -116,5 +116,6 @@ ul li { margin:0; padding:0; line-height:normal;}
 
 .post_content {width: 900px; margin: 0 auto; color: #333;}
 	.post_content ul { margin-left: 30px; list-style-type:circle;}
+	.post_content ul li {line-height: 10px;}
 
 .disqus {width: 100%; float: left;}
