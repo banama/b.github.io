@@ -80,7 +80,7 @@ tests为collections，可以理解为关系数据库中的表，fileds中内容�
 <pre><code>
 sumeru.router.add(
     {
-      pattern: '/tests',
+      pattern: '\/tests',
       action: 'App.tests'
     }
   );
