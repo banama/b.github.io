@@ -78,7 +78,6 @@ tests为collections，可以理解为关系数据库中的表，fileds中内容�
 
 在controller目录目录下建立tests.js,一个控制器文件包含两部分，一部分是路由，一部分是逻辑函数。
 ```
-<pre><code>
 sumeru.router.add(
     {
       pattern: '/tests',
@@ -100,7 +99,6 @@ sumeru.router.add(
     doRender('tests', ['push', 'left']);
   }
   });
-  </code> </pre>
 ```
 
 sumeru.router.add是增加路由，其中pattern是路径，action对应下面逻辑函数。
