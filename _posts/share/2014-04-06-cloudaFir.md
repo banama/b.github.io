@@ -24,6 +24,8 @@ clouda是基于nodejs的一个web框架，看了文档之后感觉clouda虽然�
 
   升级Clouda  `npm update -g sumeru`
   `sumeru update ./my`
+
+  进入my目录,执行命令`sumeru start`,打开浏览器输入`127.0.0.1:8080/debug.html/itworks`, 如果显示"welcome to sumer!"，那么证明sumeru已经安装成功了，如果`sumer`报错，那么可能有多方面原因，如果在此时已经预装mongodb，那么首先要进行数据库配置，具体在`server_config/database.js`,如果你已经重复装过多次，可以执行命令`ps aux |grep `看是否已经有一个sumeru 在运行，你也可以执行命令`netstat -nlp | grep 8080` 看端口是否已被占用。
 * MongoDB
   
   `mkdir mongodb/data/db`
@@ -110,7 +112,7 @@ App.tests中controller参数是两个对象，env，session。env绑定生命周
 这里就不说了，官方文档说的已经很清楚了，而且也有其他可能更为方便的方法，只需要记住一点‘tp  l-id’为我们controller中订阅者函数中已经绑定好的，即`session.bind`.
 
 ##总结
-到此为止，整个MVC已经贯通了，活到`my`目录下，执行`sumeru start`即可运行。今天刚学的一点东西，作者能力有限，所以有些语言可能欠考究。本文涉及细节可能比较多，
+到此为止，整个MVC已经贯通了，切换到`my`目录下，执行`sumeru start`即可运行。今天刚学的一点东西，作者能力有限，所以有些语言可能欠考究。本文涉及细节可能比较多，
 都是我当时遇到的一些小问题，经验之谈。一方面作为百度的框架，因为文档用的汉语，所以看起来比以往的英文文档要顺畅很多。而且官方文档很详细，大家有开发经验直接看文
 档应该也很简单。
 
