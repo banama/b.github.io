@@ -64,5 +64,6 @@ public class Hello extends HttpServlet {
 
 404？比忘了server.xml,打开服务器的serverl.xml ，拉到最后看`HOST`标签里的Context，有没有关于Servlet的`Context`，如果没有，你需要写入
 
+``` <Context docBase="Servlet" path="/Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Servlet"/>```
 
 然后再次Run as 选择server，打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`，页面应该就可以正常访问了。
