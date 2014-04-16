@@ -62,7 +62,7 @@ public class Hello extends HttpServlet {
 
 接下来可以运行了，不过要怎么做呢？很简单，选中工程，run as 选择server，然后打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`
 
-404？比忘了server.xml,打开服务器的serverl.xml ，拉到最后看<HOST>标签里的Context，有没有关于Servlet的<Context>，如果没有，你需要写入
+404？比忘了server.xml,打开服务器的serverl.xml ，拉到最后看`HOST`标签里的Context，有没有关于Servlet的`Context`，如果没有，你需要写入
 
 
 然后再次Run as 选择server，打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`，页面应该就可以正常访问了。
