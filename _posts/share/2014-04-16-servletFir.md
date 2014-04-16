@@ -67,3 +67,9 @@ public class Hello extends HttpServlet {
 ``` <Context docBase="Servlet" path="/Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Servlet"/>```
 
 然后再次Run as 选择server，打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`，页面应该就可以正常访问了。
+
+###Ps
+***
+
+* eclipse生成的servlet文件不用设置web.xml即可访问，分析他的代码发现有这一行代码`@WebServlet(path)`,其功能应该类似与python中的route装饰器。	
+
