@@ -58,7 +58,28 @@ public class Student {
 
 代码很简单，都是面向对象最最基本的东西，我可以看到分别有三个成员，以及他们的set和get方法。数据封装好了，怎么用？新建一个stu.jsp来调用。jsp的冗杂代码就不写了，写一针见血的。
 
+<pre>
+&lt;jsp:useBean id="stu" class="beans.Student" &gt;&lt;/jsp:useBean&gt;
 
+&lt;%
+	stu.setStuname("niuyichao");
+	String str = stu.getStuname();
+	out.println(str);
+%&gt;
+
+&lt;jsp:setProperty property="stuno" name="stu" value="niusir"&gt;&lt;/jsp:setProperty&gt;
+&lt;%
+	String stris = stu.getStuno();
+	out.println(stris);
+%&gt;
+
+&lt;%String tests = request.getParameter("name"); %&gt;
+&lt;jsp:setProperty property="stutest" name="stu" value="&lt;%=tests %&gt;" /&gt;
+&lt;%
+	String stris1 = stu.getStutest();
+	out.println(stris1);
+%&gt;
+</pre>
 
 
 首先看到`jsp:useBean`标签，他指明了调用javabean,class指向了我们的javabean，id你可以理解为实例化的一个对象。

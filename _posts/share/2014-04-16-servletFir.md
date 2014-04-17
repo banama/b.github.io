@@ -51,16 +51,16 @@ new => othoer => server 创建服务器
 
 打开 WebContent -> WEB-INF -> web.xml, 增加servlet
 
-<pre><code>
-	<servlet>
-		<servlet-name>Hello</servlet-name>
-		<servlet-class>servlet.Hello</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Hello</servlet-name>
-		<url-pattern>/Servlet/HelloWorld</url-pattern>
-	</servlet-mapping>
-</code></pre>
+<pre>
+&lt;servlet&gt;
+	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;servlet.Hello&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;/Servlet/HelloWorld&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+</pre>
 
 其中servlet-class 是确定的，而servlet-name则可以自己命名。
 
