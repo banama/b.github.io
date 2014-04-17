@@ -56,32 +56,3 @@ public class Student {
 }
 ```
 代码很简单，都是面向对象最最基本的东西，我可以看到分别有三个成员，以及他们的set和get方法。数据封装好了，怎么用？新建一个stu.jsp来调用。jsp的冗杂代码就不写了，写一针见血的。
-```
-<jsp:useBean id="stu" class="beans.Student" ></jsp:useBean>
-
-<%
-	stu.setStuname("niuyichao");
-	String str = stu.getStuname();
-	out.println(str);
-%>
-
-<jsp:setProperty property="stuno" name="stu" value="niusir"></jsp:setProperty>
-<%
-	String stris = stu.getStuno();
-	out.println(stris);
-%>
-
-<%String tests = request.getParameter("name"); %>
-<jsp:setProperty property="stutest" name="stu" value="<%=tests %>" />
-<%
-	String stris1 = stu.getStutest();
-	out.println(stris1);
-%>
-```
-首先看到`jsp:useBean`标签，他指明了调用javabean,class指向了我们的javabean，id你可以理解为实例化的一个对象。
-代码中有三个对成员操作的例子
-第一个，一目了然了，不过不推荐这种写法，因为jsp中包含了太多的java代码，这部是我们想要的。
-第二个，运用`jsp:setProperty`标签执行了封装好的数据类中的set方法，其中`property`为成员名，`name`为实例化的对象的名字，`value`为值。
-第三个其实和第二个差不多，不过这个扩展了request请求的值，这才是web开发的意义所在。
-
-到此为止，javabean对于数据封装及调用的一些内容已经了解了，不过貌似没有涉及到数据库，别急，我们有专门对数据库操作的DAO(Date Access Object)类。
