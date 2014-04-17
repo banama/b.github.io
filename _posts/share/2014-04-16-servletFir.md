@@ -31,33 +31,37 @@ new => othoer => server 创建服务器
 网山很多教程，new => tomcat project ,我的版本没有这个选项，在这里，选择 new => other => Dynamic Web Project ,按要求填写项目信息，假如工程名字为Servlet，一直next，知道最后勾选添加web.xml,finish。 
 
 实现第一个servlet实例，New => Servlet ,输入如下代码
-```
-package servlet;
- 
-import javax.servlet.http.HttpServlet;
 
-public class Hello extends HttpServlet {
+<pre><code>
+ package servlet;
  
-     private static final long serialVersionUID = 1L;
-	 public void doGet(HttpServletRequest request, HttpServletResponse response)
+ import javax.servlet.http.HttpServlet;
+
+ public class Hello extends HttpServlet {
+ 
+	private static final long serialVersionUID = 1L;
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 	 		throws IOException, ServletException {
 		response.setContentType("text/html");
 		PrintWriter writer = response.getWriter();
 		writer.println("Hello");
 	}
-}
-```
+ } 
+</code> </pre>
+
 打开 WebContent -> WEB-INF -> web.xml, 增加servlet
-```
-<servlet>
-    <servlet-name>Hello</servlet-name>
-	<servlet-class>servlet.Hello</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>Hello</servlet-name>
-	<url-pattern>/Servlet/HelloWorld</url-pattern>
-</servlet-mapping>
-```
+
+<pre><code>
+	<servlet>
+		<servlet-name>Hello</servlet-name>
+		<servlet-class>servlet.Hello</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Hello</servlet-name>
+		<url-pattern>/Servlet/HelloWorld</url-pattern>
+	</servlet-mapping>
+</code></pre>
+
 其中servlet-class 是确定的，而servlet-name则可以自己命名。
 
 接下来可以运行了，不过要怎么做呢？很简单，选中工程，run as 选择server，然后打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`
