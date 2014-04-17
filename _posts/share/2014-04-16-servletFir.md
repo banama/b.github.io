@@ -12,25 +12,25 @@ permalink: /share/servletFir.html
 java开发的IDE了解了很多，能力有限，搞定不了太多东西，还是老老实实用eclipse了，对于收费的myeclipse，一方面，因为的收费的，实在不想去破解，另一方面真的再懒得去下载配置...下面就讲讲eclipse 配置以及servlet HelloWorld，好记性不如烂笔头，东西多了总要总结一下，记一记。
 
 ###环境搭建
-我的系统是Ubuntu 13.10，安装eclipse版本是3.8，打开发现没有菜单栏，google才知道这好像是一个bug，最简单的解决方法，`env UBUNTU_MENUPROXY = (eclipse path)`, 命令行打开问题即解决。
+* 我的系统是Ubuntu 13.10，安装eclipse版本是3.8，打开发现没有菜单栏，google才知道这好像是一个bug，最简单的解决方法，`env UBUNTU_MENUPROXY = (eclipse path)`, 命令行打开问题即解决。
 
-为了更方便，eclipse的自动补全还需设置一下。Window => Prefenrence => java Editor => Content Assist ,在Auto Activation可按需求设置。
+* 为了更方便，eclipse的自动补全还需设置一下。Window => Prefenrence => java Editor => Content Assist ,在Auto Activation可按需求设置。
 
-eclipse进行web开发是要安装插件的，具体操作 Help => Install New Software, 打开窗口,在work with filter中选择All Aailable Sites, 然后打开Web、Xml、Java EE...那一项，选中`Dail java persistenence Tools系列`  `Eclipse * Developer Tool`  `JST Server Adapter Extensions`
-安装，重启eclipse。
+* eclipse进行web开发是要安装插件的，具体操作 Help => Install New Software, 打开窗口,在work with filter中选择All Aailable Sites, 然后打开Web、Xml、Java EE...那一项，选中`Dail java persistenence Tools系列`  `Eclipse * Developer Tool`  `JST Server Adapter Extensions`
+  安装，重启eclipse。
 
-安装tomacat服务器，tomacat安装非常简单，官网下载，解压，进入目录。执行./bin/startup.sh，打开浏览器输入`127.0.0.1:8080`,进入tomcat主页证明tomcat可以正常运行。为了开发web应用方便，需要在eclipse配置tomcat。 Window => Preferences => Server => Runtime Environment ,add 即可添加tomcat服务器，切记版本选择和自己安装tomcat版本相同。
+* 安装tomacat服务器，tomacat安装非常简单，官网下载，解压，进入目录。执行./bin/startup.sh，打开浏览器输入`127.0.0.1:8080`,进入tomcat主页证明tomcat可以正常运行。为了开发web应用方便，需要在eclipse配置tomcat。 Window => Preferences => Server => Runtime Environment ,add 即可添加tomcat服务器，切记版本选择和自己安装tomcat版本相同。
 
 到此环境配置已经基本完成，接下来实现第一个 servlet helloworld。
 
 ###实例
 
-new => othoer => server 创建服务器
+* new => othoer => server 创建服务器
 
-接下来创建web 工程，因为自己是一个菜鸟，网上很多教程eclipse版本不一样，所以走了不少弯路，下面说说我的版本的实现过程
+* 接下来创建web 工程，因为自己是一个菜鸟，网上很多教程eclipse版本不一样，所以走了不少弯路，下面说说我的版本的实现过程
 网山很多教程，new => tomcat project ,我的版本没有这个选项，在这里，选择 new => other => Dynamic Web Project ,按要求填写项目信息，假如工程名字为Servlet，一直next，知道最后勾选添加web.xml,finish。 
 
-实现第一个servlet实例，New => Servlet ,输入如下代码
+* 实现第一个servlet实例，New => Servlet ,输入如下代码
 
 <pre><code>
  package servlet;
@@ -64,11 +64,11 @@ new => othoer => server 创建服务器
 
 其中servlet-class 是确定的，而servlet-name则可以自己命名。
 
-接下来可以运行了，不过要怎么做呢？很简单，选中工程，run as 选择server，然后打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`
+接下来可以运行了，不过要怎么做呢？很简单，选中工程，run as 选择server，然后打开浏览器输入 127.0.0.1：8080/Servlet/Servlet/HelloWorld
 
 404？比忘了server.xml,打开服务器的serverl.xml ，拉到最后看`HOST`标签里的Context，有没有关于Servlet的`Context`，如果没有，你需要写入
 
-``` <Context docBase="Servlet" path="/Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Servlet"/>```
+ &lt;Context docBase="Servlet" path="/Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Servlet"/&gt;
 
 然后再次Run as 选择server，打开浏览器输入`127.0.0.1：8080/Servlet/Servlet/HelloWorld`，页面应该就可以正常访问了。
 
