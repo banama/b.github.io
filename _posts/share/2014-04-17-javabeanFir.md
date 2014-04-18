@@ -110,9 +110,7 @@ public class Student {
 
 <pre><code>
 package dao;
-
 import java.sql.*;
-
 public class Conn {
 	public static Connection getConn(){
 		String url = "jdbc:mysql://127.0.0.1:3306/test";
@@ -146,12 +144,19 @@ public class Conn {
 Conn类中有一个成员函数，getConn链接数据库函数，链接一个数据库需要知道数据库的地址，端口，账户，密码等。
 链接数据库在java中首先要实例化一个Connection对象，初始为空。其实java链接数据库很简单，核心的地方就在这两行代码
 ```Class.forName("com.mysql.jdbc.Driver").newInstance();```
+
 ```con=DriverManager.getConnection(url, user, pass);```
+
 第一行是加载连接mysql的驱动，这是可能会报错
+
 javax.servlet.ServletException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+
 因为java原生不会带mysql驱动，所以我们需要去下载下来，解压放到自己想要的任意文件夹，然后右击工程 build path => Add External Archievs => (path) ，找到这个驱动库即可。
+
 此时在你的控制台应该能看到类似于`com.mysql.jdbc.JDBC4Connection@574b19`，这证明你已经链接成功了，连接成功我们还需要读取数据，并在页面显示。
-在beans包下建立Testdao.clss,输入以下代码
+在beans包下建立Testdao.class,输入以下代码
+
+
 <pre><code>
 package dao;
 
@@ -183,19 +188,26 @@ public class Testdao {
 		return students;
 	}
 }
-</code> </pre>
+</code></pre>
+
+
 这个类实现的功能是连接数据库后，读取数据库信息，并以封装好的数据模型那样存储。因此首先我们需要导入dao.Conn和beans.Student。因为成员函数数据返回的是不是一个，所以，我们把它存为ArrayList。
+
 首先实例化一个ArrayList用来存储返回值，初始化一个String存储sql语句，并实例化一个Connection对象，连接数据库。接下来代码就是将数据库读取出来的数据存为ArrayList，并返回，这一块也挺简单，涉及到Statement、ResultSet等sql接口。
+
 当然我们需要事先建表，这个例子的建表sql语句如下
-<pre><code>
+
+<pre>
 create table student( 
 	id int(12) not null, 
 	stuname vachar(30), 
 	test varchar(12)
 );
-</code></pre>
+</pre>
+
 javabean的数据库操作到此位置基本的已经实现了，为了在页面中显示出来，我们建立一个jsp页面，输入以下代码
-<pre><code>
+
+<pre>
 &lt;%@ page import="java.util.*,java.sql.*" %&gt;
 &lt;jsp:useBean id="stu" class="beans.Student" scope="page" /&gt;
 &lt;jsp:useBean id="testdao" class="dao.Testdao" scope="page" /&gt;
@@ -220,7 +232,13 @@ javabean的数据库操作到此位置基本的已经实现了，为了在页面
 &lt;%
 	}
 %&gt;
-</code></pre>
+</pre>
 
 javabean在jsp页面的调用前文已经讲过，不再细说。
+
 ArrayList students = testdao.query()即可将数据库读取的结果返回到students，它是一个ArrayList,通过JSP表达式即可取值。
+
+###总结
+到此为止，你应该可以看到你的jsp页面上显示的为数据库的信息，看似挺麻烦，的确相比python代码可能会多出很多，但是核心的逻辑代码可能也就那么几行，加上eclipse强大的自动补全功能，如果熟练了，高效率快速coding自然不在话下。其实简单总结就两句话
+*	javabean把数据库获得的数据封装好
+*	jsp通过javabean把数据库封装好的数据显示出来。
