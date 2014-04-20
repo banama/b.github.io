@@ -9,12 +9,14 @@ permalink: /index.html
 书不在多而在精，一针见血的好书读起来两个字：痛快！
 
 ###C语言三剑客
-+	C和指针
-+	C专家编程
-+	C陷阱与缺陷
++ C和指针
+
++ C专家编程
+
++ C陷阱与缺陷
 
 ###Python
-+	Python网络编程基础
++ Python网络编程基础
 
 ###Javascript
-+	Nodejs入门经典
++ Nodejs入门经典
