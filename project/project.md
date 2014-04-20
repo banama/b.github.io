@@ -7,7 +7,9 @@ permalink: /index.html
 [zh12306](https://github.com/banama/zh12306)
 -----
 一个简单的火车票信息查询网站，包括车次查询，停靠站点查询，余票查询，推荐行程
+
 目前网站正在改版重构代码，打算增加用户登录，做推荐算法的实现，同时也为了使代码更加健壮
+
 网站采用Django框架
 
 
@@ -20,10 +22,12 @@ permalink: /index.html
 -----
 个人资源搜集的分享
 
+
 [netchat](https://github.com/banama/nechat)
 -----
 一个基于nodejs express 的聊天室
 Loading
+
 
 [gistm](https://github.com/banama/gist)
 -----
