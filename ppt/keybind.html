@@ -20,9 +20,11 @@
     <link rel="stylesheet" href="deck.js/introduction.css">
     
     <!-- Theme CSS files (menu swaps these out) -->
+    <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css">
     <link rel="stylesheet" id="style-theme-link" href="deck.js/themes/style/neon.css">
     <link rel="stylesheet" id="transition-theme-link" href="deck.js/themes/transition/horizontal-slide.css">
-    
+    <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
+    <script src="http://fengmk2.github.com/js/prettify.js"></script>
     <script src="deck.js/modernizr.custom.js"></script>
 </head>
 
@@ -33,20 +35,122 @@
 </div>
 
 
-<div class="slide">
+<div class="slide" style="line-height:60px;">
     <h2>键盘原理</h2>
-    <h3>键盘一般由按键、导电塑胶、编码器以及接口电路等组成.</h3>
-   <h3> 当有按键事件发生 ，键盘中的编码器能够迅速将此按键所对应的编码通过接口电路输送到计算机的键盘缓冲器中，由CPU进行识别处理.</h3>
+    <h3>键盘一般由按键、导电塑胶、编码器以及接口电路等组成。<br>
+     当有按键事件发生 ，键盘中的编码器能够迅速将此按键所对应的编码通过<br>
+     接口电路输送到计算机的键盘缓冲器中，由CPU进行识别处理。<br>
+     键盘的每个按键都有对应的编码(类似ASCII码)，编码器会根据相应按键编<br>
+     码。
+     </h3>
 </div>
 
 <div class="slide">
     <h2>键码表(keycode)</h2>
     <img src="keycode.png" data-pinit="registered">
-    <a href="chrome://extensions" target="_blank">演示</a>
 </div>
 
 <div class="slide">
-    <h1>next("Thanks ^_^")</h1>
+    <h2>keybind.crx 代码</h2>
+    <pre class="prettyprint">
+        <code>
+function keypress(){
+    alert('ready!');
+    var bd = document.getElementsByTagName('body')[0];
+    bd.onkeypress = function(ev){
+        var code = ev.keyCode;
+        var keyChar = String.fromCharCode(code);
+        alert(code + ':' + keyChar);
+    }
+}            
+        </code>
+    </pre>
+</div>
+
+<div class="slide">
+  <h2>C语言键盘监听</h2>
+  <pre>
+   <code>
+#include <stdio.h> 
+#include <unistd.h> 
+#include <termios.h> 
+  
+static struct termios initial_settings, new_settings; 
+static int peek_character = -1; 
+  
+void init()
+{ 
+     tcgetattr(0, &initial_settings); 
+     new_settings = initial_settings; 
+     new_settings.c_lflag &= ~(ICANON|ISIG|TOSTOP); 
+     new_settings.c_cc[VMIN] = 1; 
+     new_settings.c_cc[VTIME] = 0; 
+     tcsetattr(0, TCSANOW, &new_settings); 
+} 
+  
+void close_bind(){ 
+     tcsetattr(0, TCSANOW, &initial_settings); 
+} 
+  
+int bind()//监听键盘 
+{ 
+     unsigned char ch; 
+     int nread; 
+  
+     if (peek_character != -1) 
+         return 1; 
+     new_settings.c_cc[VMIN]=0; 
+     tcsetattr(0, TCSANOW, &new_settings); 
+     nread = read(0, &ch, 1); 
+     new_settings.c_cc[VMIN]=1; 
+     tcsetattr(0, TCSANOW, &new_settings); 
+     if(nread == 1) 
+     { 
+         peek_character = ch; 
+         return 1; 
+     } 
+     return 0; 
+} 
+  
+int get()//读取字符 
+{ 
+     char ch; 
+  
+     if(peek_character != -1) 
+     { 
+         ch = peek_character; 
+         peek_character = -1; 
+         return ch; 
+     } 
+     read(0, &ch, 1); 
+     return ch; 
+} 
+  
+int main() 
+{ 
+     init(); 
+     FILE *fp; 
+     fp = fopen("KeyBind", "w"); 
+     while(1)  
+     { 
+         while(!bind()) 
+             ; 
+         char ch = get(); 
+         if(ch == '-') 
+            break; 
+         fprintf(fp, "%c", ch); 
+     } 
+     fclose(fp); 
+     close_bind(); 
+     printf("\nBind end!\n"); 
+} 
+
+   </code>
+   </pre>
+</div>
+
+<div class="slide">
+    <h1>谢谢</h1>
 </div>
 <!-- 
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
@@ -74,6 +178,14 @@
 
 <!-- Specific to this page -->
 <script src="deck.js/introduction/introduction.js"></script>
+<script>
+$(function() {
+  // Deck initialization
+  $.deck('.slide');
+  $('pre code').parent().addClass('prettyprint');
+  prettyPrint();
+});
+</script>
 
 </body>
 </html>
