@@ -48,44 +48,78 @@
 <div class="slide">
     <h2>键码表(keycode)</h2>
     <img src="keycode.png" data-pinit="registered">
+    <h3>P173</h3>
 </div>
 
 <div class="slide">
-    <h2>keybind.crx 代码</h2>
+    <h2>Javascript 键盘监听</h2>
     <pre class="prettyprint">
         <code>
 function keypress(){
-    alert('ready!');
     var bd = document.getElementsByTagName('body')[0];
+    var bindcode = document.getElementById('bindcode');
     bd.onkeypress = function(ev){
-        var code = ev.keyCode;
+        var code = ev.keyCode || ev.which;
         var keyChar = String.fromCharCode(code);
-        alert(code + ':' + keyChar);
+        bindcode.innerHTML = ('keycode ' + code + '\t:\t' + 'key ' + keyChar);
     }
-}            
+}           
         </code>
     </pre>
+    <h3 id='bindcode'></h3>
+    <script type="text/javascript">
+
+        function keypress(){
+            var body = document.getElementsByTagName('body')[0];
+            var bindcode = document.getElementById('bindcode');
+            bindcode.innerHTML = ('keycode ' + '\t:\t' + 'key');
+            body.onkeypress = function(ev){
+                var code = ev.keyCode || ev.which;
+                var keyChar = String.fromCharCode(code);
+                bindcode.innerHTML = ('keycode ' + code + '\t:\t' + 'key ' + keyChar);
+            }
+        } 
+        window.onload = keypress;
+    </script>
 </div>
 
 <div class="slide">
-  <h2>C语言键盘监听</h2>
+    <h2>kbhit()函数</h2>
+    <h3>检查当前是否有键盘输入，若有则返回一个非0值，否则返回0</h3>
+    <br>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+ 
+int main(void) 
+{ 
+   cprintf("Press any key to continue:"); 
+   while (!_kbhit());
+   cprintf("\r\n A key was pressed.\r\n"); 
+   return 0; 
+} 
+    </code></pre>
+</div>
+
+<div class="slide">
+  <h2>Linux C语言键盘监听</h2>
   <pre>
    <code>
-#include <stdio.h> 
-#include <unistd.h> 
-#include <termios.h> 
+#include &lt;stdio.h&gt; 
+#include &lt;unistd.h&gt; 
+#include &lt;termios.h&gt; 
   
 static struct termios initial_settings, new_settings; 
 static int peek_character = -1; 
-  
+
 void init()
 { 
-     tcgetattr(0, &initial_settings); 
+     tcgetattr(0, &initial_settings); //获取命令行参数 
      new_settings = initial_settings; 
      new_settings.c_lflag &= ~(ICANON|ISIG|TOSTOP); 
      new_settings.c_cc[VMIN] = 1; 
      new_settings.c_cc[VTIME] = 0; 
-     tcsetattr(0, TCSANOW, &new_settings); 
+     tcsetattr(0, TCSANOW, &new_settings); //设置命令行参数
 } 
   
 void close_bind(){ 
