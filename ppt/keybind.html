@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="deck.js/introduction.css">
     
     <!-- Theme CSS files (menu swaps these out) -->
-    <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css">
+    <link rel="stylesheet" href="style/prettify.css">
     <link rel="stylesheet" id="style-theme-link" href="deck.js/themes/style/neon.css">
     <link rel="stylesheet" id="transition-theme-link" href="deck.js/themes/transition/horizontal-slide.css">
-    <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
-    <script src="http://fengmk2.github.com/js/prettify.js"></script>
+    <script src="style/jquery-1.7.min.js"></script>
+    <script src="style/prettify.js"></script>
     <script src="deck.js/modernizr.custom.js"></script>
 </head>
 
@@ -114,12 +114,28 @@ static int peek_character = -1;
 
 void init()
 { 
-     tcgetattr(0, &initial_settings); //获取命令行参数 
+     tcgetattr(0, &initial_settings); 
+     //获取命令行参数, 0 当前终端 
+     
      new_settings = initial_settings; 
      new_settings.c_lflag &= ~(ICANON|ISIG|TOSTOP); 
+     /* c_lflag 本地模式标志，控制终端编辑功能
+     SIG 当输入INTR、QUIT、SUSP或DSUSP时，产生相应的信号
+     ICANON 使用标准输入模式
+     TOSTOP 向后台输出发送SIGTTOU信号
+    */
+
      new_settings.c_cc[VMIN] = 1; 
+     // 非 canonical 模式读的最小字符数
+
      new_settings.c_cc[VTIME] = 0; 
-     tcsetattr(0, TCSANOW, &new_settings); //设置命令行参数
+     //非 canonical 模式读时的延时，以十分之一秒为单位 
+
+     tcsetattr(0, TCSANOW, &new_settings);
+     /* 
+     int tcsetattr(int fd,int actions,const struct termios *termios_p);
+     TCSANOW：改变立即发生 
+     */
 } 
   
 void close_bind(){ 
@@ -200,7 +216,7 @@ int main()
 
 <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
 
-<script src="http://fengmk2.cnpmjs.org/js/jquery-1.7.min.js"></script>
+<script src="style/jquery-1.7.min.js"></script>
 
 <!-- Deck Core and extensions -->
 <script src="deck.js/core/deck.core.js"></script>
