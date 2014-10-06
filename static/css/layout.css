@@ -160,6 +160,7 @@ ul li { margin:0; padding:0; line-height:normal;}
 .resume blockquote {
 	padding: 0px;
 	margin: 15px 0px 5px 20px;
+	border-left: 5px solid #1da5b5;
 }
 
 .resume p {
