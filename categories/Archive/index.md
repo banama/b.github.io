@@ -1,6 +1,6 @@
 ---
 layout: default_index
-title: share
+title: Archive
 permalink: /index.html
 ---
 
