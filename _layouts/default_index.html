@@ -1,34 +1,14 @@
-{% include meta.html %}
-<div class="main">
-	<!--top-->
-	<div class="top">
-		<div class="name"><h1>Banama</h1></div>
-		{% include nav.html %}
-	</div>
+{% include header.html %}
+{% include nav.html %}
 
-	<!--contents-->
-	<div class="contents">
-
-		<!--silder_r-->
-		<div class="slider_l">
-			<div class="slnav">
-			<ul>	
-					<li><a href="{{ site.url }}/categories/science/">科学计算</a></li>
-					<li><a href="{{ site.url }}/categories/share/">分享</a></li>
-				</ul>	
-			</div>
+<!--contents-->
+<div class="container">
+		<div class="content">
+			{{ content }}
 		</div>
+</div>
 
-		<!--silder_l-->
-		<div class="slider_r">
-			<div class="content">
-				{{ content }}
-			</div>
-		</div>
-
-	</div>
-	{% include foot.html %}
-	
+{% include foot.html %}
 <script type="text/javascript">
 seajs.config({
     base: "{{ site.url }}/static",
