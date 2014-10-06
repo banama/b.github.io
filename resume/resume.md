@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: resume
-permalink: /index.html
+permalink: /resume/index.html
 ---
 
 ##个人信息
