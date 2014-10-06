@@ -1,8 +1,8 @@
 ---
 layout: default_post
 title: 初识Clouda 
-categories: share
-permalink: /share/cloudaFir.html
+categories: Archive
+permalink: /Archive/cloudaFir.html
 ---
 
 前言

@@ -1,20 +1,14 @@
 {% include header.html %}
-{% include nav.html %}
+<div class="resume-top">
+	<p>牛轶超的简历</p>
+</div>
 
 <div class="container">
-	
-	<!--contents-->
-	<div class="title">
-		<h1>{{ page.title }}</h1>
-	</div>
-
-	<div class="post_content">
+	<div class="resume">
 		{{ content }} 
 	</div>
 </div>
 
-
-{% include foot.html %}
 <script type="text/javascript">
 seajs.config({
     base: "{{ site.url }}/static",

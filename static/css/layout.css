@@ -5,7 +5,7 @@
 body { margin:0; padding:0; background:#fff;
        font-family:Arial,sans-serif;
        font-size:16px; color:#dd0000; }
-a { display: block; color: #777}
+a { color: #777}
 a, a:visited { text-decoration:none; }
 a:hover { text-decoration: none; color: #5cb85c; -webkit-transition: all linear 0.4s;
     -moz-transition: all linear 0.4s;}
@@ -127,3 +127,41 @@ ul li { margin:0; padding:0; line-height:normal;}
 	.post_content ul li {/*line-height: 10px;*/}
 
 .disqus {width: 100%; float: left;}
+
+/**
+  * resume
+  */
+.resume-top { 
+	color: #fff;
+	/*background: #5cb85c;*/
+	background: #1da5b5;
+	text-align: center;
+	padding: 30px 0px;
+	margin-bottom: 20px;
+}
+
+.resume-top p {
+	font-size: 36px;
+}
+
+.resume{
+	color: #666769;
+	margin-bottom: 30px;
+}
+
+.resume ul {
+	padding: 10px 0px 20px 40px;
+}
+
+.resume ul li {
+	line-height: 1.4;	
+}
+
+.resume blockquote {
+	padding: 0px;
+	margin: 15px 0px 5px 20px;
+}
+
+.resume p {
+	margin: 0px 0px 0px 20px;
+}

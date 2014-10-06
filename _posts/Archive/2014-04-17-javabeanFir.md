@@ -1,8 +1,8 @@
 ---
 layout: default_post
 title: javabean实例及数据库点滴
-categories: share
-permalink: /share/javabeanFir.html
+categories: Archive
+permalink: /Archive/javabeanFir.html
 ---
 
 Javabean可以对数据进行良好的封装，可以理解微MVC模式的model，这篇文章属于HelloWorld级别，没有什么高深内容，只有点滴。

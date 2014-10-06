@@ -1,8 +1,8 @@
 ---
 layout: default_post
 title: java web环境配置和Servlet实例HelloWorld 
-categories: share
-permalink: /share/servletFir.html
+categories: Archive
+permalink: /Archive/servletFir.html
 ---
 
 曾经一直对很”重“的东西很痛恨，也可能因为自己懒...因此一直对微软的东西不感冒，学校的网速下载个VS都有种想死的感觉。对于java也是同样的感觉，eclipse让我曾经望而却步。其实我一直有种想法，感觉java适用于企业级的应用，而我内心不想做一个螺丝钉，我喜欢做一些快速的，magic，有掌控力的工作，当然也有可能是飘渺的成就感在作祟。但是java越来越火，总有他的原因，一个优秀的程序员不该有偏见，不是吗？练级之路不应惧怕任何挑战！

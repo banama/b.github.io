@@ -1,8 +1,8 @@
 ---
 layout: default_post
 title: Python装饰器中的self理解
-categories: share
-permalink: /share/Python-Decorator-self.html
+categories: Archive
+permalink: /Archive/Python-Decorator-self.html
 ---
 
 问题起源于我读Flask的源码，对于self我知道它是类中对自己的引用，可是放到函数里是什么意思？如Flask中代码
