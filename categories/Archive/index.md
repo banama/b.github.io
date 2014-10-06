@@ -5,7 +5,7 @@ permalink: /index.html
 ---
 
 <ul>
-	{% for post in site.categories.share %}
+	{% for post in site.categories.Archive %}
 	<li>
 		{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a >
 	</li>
