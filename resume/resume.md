@@ -17,9 +17,11 @@ permalink: /resume/index.html
 * Node.js
 
 ##项目经验
-> [Simple-editor](https://github.com/banama/simple-editor)
+> [Simple-editor](https://github.com/banama/simple-editor) 
 
 一个基于seajs、jquery和markdown-js实现的markdown编辑器
+
+[Demo](../simple-editor)
 
 > [校园问答社区](http://hnustqa.duapp.com/)
 
@@ -60,8 +62,8 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
 
 ##其他
 * Linux用户 (Ubuntu / Fedora / CentOS)
-* 版本管理/文档: Git/sphinx
-* SAE/BAE平台经验
+* 版本管理/文档: Git / sphinx
+* SAE / BAE平台经验
 * 各种爬虫，实验室打杂
 * Mysql-Cluster
  
