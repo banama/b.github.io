@@ -21,7 +21,7 @@ permalink: /resume/index.html
 
 一个基于seajs、jquery和markdown-js实现的markdown编辑器
 
-[Demo](../simple-editor)
+[Demo](http://banama.github.io/simple-editor)
 
 > [校园问答社区](http://hnustqa.duapp.com/)
 
