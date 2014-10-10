@@ -17,6 +17,10 @@ permalink: /resume/index.html
 * Node.js
 
 ##项目经验
+> [toPDF](http://topdf.sinaapp.com)
+
+将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage和七牛云存储，数据库使用 SAE KVDB. 简历右下角PDF简历下载即由此插件生成.
+
 > [Simple-editor](https://github.com/banama/simple-editor) 
 
 一个基于seajs、jquery和markdown-js实现的markdown编辑器
@@ -25,7 +29,7 @@ permalink: /resume/index.html
 
 > [校园问答社区](http://hnustqa.duapp.com/)
 
-团队项目(Java/Reids/Mysql),负责用户关注、问题收藏、问题/答案的踩赞、个人主页等功能的前后端实现，消息通知系统，缓存，标签系统(前端标签插件)
+团队项目(Java/Reids/Mysql),负责用户关注、问题收藏、问题/答案的踩赞、个人主页等功能的前后端实现，消息通知系统，缓存，标签系统(前端标签插件)的实现, 以及运用Echart 绘制关系网络图.
 
 > [Simple-input](https://github.com/banama/simple-input)
 
@@ -37,7 +41,7 @@ permalink: /resume/index.html
 
 > [Iaas管理平台](https://github.com/banama/snippet/tree/master/iaas)
 
-类似于青云等云平台的前台单页管理系统。后台基于flask框架和MySQL数据库实现，前台主要采用AngularJS，部分效果依赖jquery(因flask模板引擎jinja2和AngularJS标签冲突坠坑)
+类似于青云等云平台的前台单页管理系统。后台基于flask框架和MySQL数据库实现(ORM框架SQLAlchemy)，前台主要采用AngularJS，部分效果依赖jquery(因flask模板引擎jinja2和AngularJS标签冲突坠坑)
 
 > [CLT](https://github.com/banama/CLT)
 
@@ -73,3 +77,4 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
 * <a href="https://github.com/banama"><span class="glyphicon glyphicon-link">GitHub</span></a>
 * <a href="http://segmentfault.com/u/banama"><span class="glyphicon glyphicon-link">Segmentfault</span></a>
 * <a href="http://banama.github.io"><span class="glyphicon glyphicon-link">个人博客</span></a>
+* 在线简历: http://banama.github.io/resume
