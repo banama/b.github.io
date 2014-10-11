@@ -1,5 +1,17 @@
-
-pre {padding: 10px; background-color: #cccc99; border: 1px solid #999966; border-radius: 3px;}
-code {padding: .5em .em; background-color: #cccc99;border: 1px solid #999966; border-radius: 3px;}
-pre code {padding: .5em .em; background-color: #cccc99; border:none;}
+pre {
+	padding: 10px; 
+	border-top: 1px solid #5cb85c; 
+	border-bottom: 1px solid #5cb85c;
+	border-left: none;
+	border-right: none;
+	background: #fff;
+	border-radius: 0px;
+}
+code {padding: .5em .em; background-color: #fff ;border: 1px solid #5cb85c; border-radius: 4px;}
+pre code {padding: .5em .em; background-color: #fff; border:none;}
 .post_content p a {display: inline-block;}
+blockquote {
+	margin: 0px 0px 20px 0px;
+	border-left: 5px solid #1da5b5;
+}
+blockquote p{ margin-top: 0px;}
