@@ -53,7 +53,7 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
 
 > [nrm](https://github.com/Pana/nrm)
 
-贡献代码的nodejs开源项目，npm资源镜像管理工具
+贡献代码的nodejs开源项目，npm镜像源管理工具
 
 > [二手交易网站](ershoujiaoyi)
 
