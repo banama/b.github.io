@@ -66,9 +66,10 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
 
 ##其他
 * Linux用户 (Ubuntu / Fedora / CentOS)
-* 版本管理/文档: Git / sphinx
+* 版本管理/文档: Git、SVN / sphinx
 * SAE / BAE平台经验
 * 各种爬虫，实验室打杂
+* JAVA
 * Mysql-Cluster
  
 
@@ -76,5 +77,6 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
 * bniuyc[at]gmail.com
 * <a href="https://github.com/banama"><span class="glyphicon glyphicon-link">GitHub</span></a>
 * <a href="http://segmentfault.com/u/banama"><span class="glyphicon glyphicon-link">Segmentfault</span></a>
+* <a href="http://v2ex.com/member/banama"><span class="glyphicon glyphicon-link">V2EX</span></a>
 * <a href="http://banama.github.io"><span class="glyphicon glyphicon-link">个人博客</span></a>
 * 在线简历: http://banama.github.io/resume
