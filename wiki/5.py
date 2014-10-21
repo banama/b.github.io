@@ -1,27 +1,22 @@
 from ipdb import set_trace
-def f():
+def f(n):
 	a = 2
+	def _(k, l):
+		if min(k, l) == 1:
+			return l
+		for i in range(2, min(k, l)+1):
+			if k % i==0 and l%i == 0:
+				return _(k/i, l/i)
+			if i == min(k, l):
+				return l
 
-	def s(k,i):
+	for i in range(2,n+1):
 		if i == 2:
-			return 1
-
-		for j in range(2,max(k,if)):
-			if k == 1:
-				return 1
-			elif i%j == 0 and k%j ==0:
-				return s((k/j),i/j)
-			elif j==i-1:
-				return k
-			else:
-				continue
+			a = 2
+		else:
+			a = a * _(a, i)
+	print a
 
 
-	for i in range(2,21):
-		t = s(a, i)
-		print t
-
-		a *= t
-	return a
-f()
+f(20)
 
