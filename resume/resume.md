@@ -17,6 +17,7 @@ permalink: /resume/index.html
 * Node.js
 
 ##项目经验
+> [easyurl]()
 > [toPDF](http://topdf.sinaapp.com)
 
 将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage和七牛云存储，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
@@ -31,9 +32,6 @@ permalink: /resume/index.html
 
 团队项目(Java/Reids/Mysql),负责用户关注、问题收藏、问题/答案的踩赞、个人主页等功能的前后端实现，消息通知系统，缓存，标签系统(前端标签插件)的实现, 以及运用Echart 绘制关系网络图.
 
-> [Simple-input](https://github.com/banama/simple-input)
-
-基于jquery实现的ajax补全插件
 
 > [janluo](https://github.com/banama/janluo)
 
