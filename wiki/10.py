@@ -1,6 +1,7 @@
+#coding:utf8
 import time
 def f(a):
-	flag = 4
+	flag = 4 
 	sum = 5
 	start = time.time()
 	while a-flag:
