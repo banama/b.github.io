@@ -7,7 +7,7 @@ pre {
 	background: #fff;
 	border-radius: 0px;
 }
-code {padding: .5em .em; background-color: #fff ;border: 1px solid #5cb85c; border-radius: 4px;}
+code {padding: .5em .em; background-color: #fff ;border: 1px solid #5cb85c; border-radius: 4px; margin-bottom: 1.5em}
 pre code {padding: .5em .em; background-color: #fff; border:none;}
 .post_content p a {display: inline-block;}
 blockquote {
@@ -15,3 +15,8 @@ blockquote {
 	border-left: 5px solid #1da5b5;
 }
 blockquote p{ margin-top: 0px;}
+
+ul li {
+	list-style:initial;
+	padding: 2px;
+}

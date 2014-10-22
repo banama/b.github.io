@@ -15,7 +15,7 @@ permalink: /Archive/python-byte-encode.html
 + type
 + isinstance
 
-后两个想必大家都比较熟悉，`type`可以判断一个对象的内容，在这里不严谨的考虑，一般会有`int`、`str`、`unicode`等。`isinstance`也是判断一个对象的类型，和`type` 不一样的是返回布尔类型，比如`isinstance(sr, bytes)`。模块`chardet`刚刚发现的，比较好用，用法如下：
+后两个想必大家都比较熟悉，type可以判断一个对象的内容，在这里不严谨的考虑，一般会有int、str、unicode等。isinstance也是判断一个对象的类型，和type不一样的是返回布尔类型，比如isinstance(sr, bytes)。模块chardet刚刚发现的，比较好用，用法如下：
 
 <pre><code>
 In [121]: import chardet
@@ -50,7 +50,7 @@ Out[132]: str
 
 我们发现字符串对象`sr`无论是中文还是英文，他们的对象类型都是`str`，而编码却不同。我在这理解为，utf8编码和ASCII码，只是当ascii能胜任的编码会直接用ascii编码，否则会调用系统默认编码格式来编码。但这只是在命令行的情况。
 
-Python文件的开头往往有一个`#-*- coding:utf-8 -*-`，他其实是在告诉解释器`我的编码格式是utf8`，有了这个“声明”，一般在代码中有中文注释也不会有问题，因为utf8是可以编码大多数自然语言的。但是如果去掉这个注释，出现ASCII字符集无法编码的字符，就会报错，如
+Python文件的开头往往有一个`#-*- coding:utf-8 -*-`，他其实是在告诉解释器“我的编码格式是utf8“，有了这个“声明”，一般在代码中有中文注释也不会有问题，因为utf8是可以编码大多数自然语言的。但是如果去掉这个注释，出现ASCII字符集无法编码的字符，就会报错，如
 
 <pre><code>
   File "~/9.py", line 11
@@ -103,7 +103,7 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc5 in position 0: ordinal 
 不管当时用到什么奇淫技巧，终归还是图片的二进制流和base64编码。
 
 <pre><code>
-	data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAbwAAAG8AQAAAACNyy1yAAACyUlEQVR4nO2cQW7jMAxFPwfe0zfo/W8nnYCzICXRThadpGNVzheK1JH14AggaPKTthheGvXPaxxAkCBBgvcHpY8dAFBF9vjsfw/LFtsjwfXBDQC0+BcBUHeooQrUBPAIIeKEvGylPRK8BwgzgxoAqEHNBwAryMd+diwrC+2R4D3BCAPUoCYiMauPGdj8n0rw08EqcEfqYYCIhwRW/tsVCRL81tj8X/ebBg9Zix+3SNWkzbx9RYIE3wBr5PcAZId8GQD5spMOkJett0eCy4MbDt7S/ar45ziVj9+9IkGCr4PhKquISA9NzcxNFADUfHJkW6vtkeD6YGhWYZ8lpKqYbwtCvyphtGbUrAjOsdVsrk0+HWe77poFWNoqwcvBJPi7/0x+NWz4WB2IGdoqwavBYZPxtaDHA8mLRjkgzrJuRXCqvmp1NxxqqeKlfy3RITD5pxL8cPB8x49ZHe50pFQF6H0C9KsErwZHvNoTqJ71n3J/5FSLtkrwahDZPpFkq2GuZocIln6V4BxwA2CpW1W8wwrRrepBqgHQIt7EAoiWpfZI8B6g91p7c3URt9tWaYUaPOECLKy0WfJKeyR4D3Dc+odClULTnnBl8YoxAMHptYAQrLQnUKM0AMarBCeDyX/m0n9uCehGWzB8LG2V4NVgcqc4FALS7f5gw/SrBCeBUbdCFRtp1O5pVKtbGfojrujPXi20R4L3ADegNVcDrgOYWpilq1htaehXsXihPRK8B9ju7CcFwEcquea2QNatCE7UrGKM1ClOZUVr9GIxXiU4C9ThVKHxSGBYZpWDZvVTVyRI8N9HV/vPN/rHBaC+SvA3ge1dFt2L+gPXURSo0mZ+wU8l+Fng9nQ2cn8tqHtXCX7oigQJvjbO712R0aZS4M0qPryPpe5CfZXgHPCJDoDUqdKfB8wSAeNVgjPAp/f3bwy+g50gQYIEn4+/1i+fYs0d9RkAAAAASUVORK5CYII=
+data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAbwAAAG8AQAAAACNyy1yAAACyUlEQVR4nO2cQW7jMAxFPwfe0zfo/W8nnYCzICXRThadpGNVzheK1JH14AggaPKTthheGvXPaxxAkCBBgvcHpY8dAFBF9vjsfw/LFtsjwfXBDQC0+BcBUHeooQrUBPAIIeKEvGylPRK8BwgzgxoAqEHNBwAryMd+diwrC+2R4D3BCAPUoCYiMauPGdj8n0rw08EqcEfqYYCIhwRW/tsVCRL81tj8X/ebBg9Zix+3SNWkzbx9RYIE3wBr5PcAZId8GQD5spMOkJett0eCy4MbDt7S/ar45ziVj9+9IkGCr4PhKquISA9NzcxNFADUfHJkW6vtkeD6YGhWYZ8lpKqYbwtCvyphtGbUrAjOsdVsrk0+HWe77poFWNoqwcvBJPi7/0x+NWz4WB2IGdoqwavBYZPxtaDHA8mLRjkgzrJuRXCqvmp1NxxqqeKlfy3RITD5pxL8cPB8x49ZHe50pFQF6H0C9KsErwZHvNoTqJ71n3J/5FSLtkrwahDZPpFkq2GuZocIln6V4BxwA2CpW1W8wwrRrepBqgHQIt7EAoiWpfZI8B6g91p7c3URt9tWaYUaPOECLKy0WfJKeyR4D3Dc+odClULTnnBl8YoxAMHptYAQrLQnUKM0AMarBCeDyX/m0n9uCehGWzB8LG2V4NVgcqc4FALS7f5gw/SrBCeBUbdCFRtp1O5pVKtbGfojrujPXi20R4L3ADegNVcDrgOYWpilq1htaehXsXihPRK8B9ju7CcFwEcquea2QNatCE7UrGKM1ClOZUVr9GIxXiU4C9ThVKHxSGBYZpWDZvVTVyRI8N9HV/vPN/rHBaC+SvA3ge1dFt2L+gPXURSo0mZ+wU8l+Fng9nQ2cn8tqHtXCX7oigQJvjbO712R0aZS4M0qPryPpe5CfZXgHPCJDoDUqdKfB8wSAeNVgjPAp/f3bwy+g50gQYIEn4+/1i+fYs0d9RkAAAAASUVORK5CYII=
 </code></pre>
 
 把以上代码复制到浏览器里，看看会出现什么？图片的二进制base64编码，加上`头`，浏览器就是可以解析的。
