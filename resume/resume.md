@@ -19,7 +19,7 @@ permalink: /resume/index.html
 ##项目经验
 > [toPDF](http://topdfs.sinaapp.com)
 
-将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage和七牛云存储，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
+将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站(tornado)组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage和七牛云存储，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
 
 > [Simple-editor](https://github.com/banama/simple-editor) 
 
@@ -71,7 +71,8 @@ Werkzeug是Python的WSGI规范的函数库，python web框架flask正是基于We
  
 
 ##联系我
-* bniuyc[at]gmail.com
+* cellphone 18073278582
+* email bniuyc[at]gmail.com
 * <a href="https://github.com/banama"><span class="glyphicon glyphicon-link">GitHub</span></a>
 * <a href="http://segmentfault.com/u/banama"><span class="glyphicon glyphicon-link">Segmentfault</span></a>
 * <a href="http://v2ex.com/member/banama"><span class="glyphicon glyphicon-link">V2EX</span></a>
