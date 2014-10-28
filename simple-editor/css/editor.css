@@ -55,14 +55,14 @@ input, textarea {outline: none}
     border: 0px;
     resize: none;
     width: 100%;
-    height: 38px;
+    height: 32px;
     font-size: 20px;
 }
 
-.workspace-focus {
-    background: #f6f6f6;
+.workspace:focus {
+    background: #fff;
     color: #333;
-    border: solid 1px #5cb85c;
+    border-bottom: solid 1px #5cb85c;
     border-radius: 4px;
 }
 
@@ -83,4 +83,14 @@ input, textarea {outline: none}
 a.input-desc-info:hover {
     color: #5cb85c;
     text-decoration: none;
+}
+
+#preview {
+    border: 1px solid #5cb85c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#preview p {
+    margin: 0px;
 }

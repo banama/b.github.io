@@ -7,8 +7,9 @@ define(function(require, exports) {
         this.update = function () {
             if (input.value != '说点什么吧'){
                 input.style.height = input.scrollHeight + input.scrollTop + 'px';
-                input.style.background = '#f6f6f6'
+                input.style.background = '#fff'
                 input.style.color = '#333'
+                input.style.border = '10px 10px 10px 10px solid #000' 
                 
                 preview.innerHTML = markdown.toHTML(input.value);
             }        
