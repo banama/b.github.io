@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="out">
+		<div id="inner1">
+			<p id="inner2">event</p>
+			<ul id="inner3">
+				<li class="a1">a1</il>
+				<li class="a2">a2</il>
+				<li class="a3">a3</il>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+p = document.getElementById('out')
+inner1 = document.getElementById('inner1')
+inner2 = document.getElementById('inner2')
+
+p.addEventListener('click', function(e){
+	alert(e.target+'p2')
+}, true)
+
+p.addEventListener('click', function(e){
+	alert(e.target+'p')
+	console.log(e.currentTarget)
+}, false)
+inner1.addEventListener('click', function(e){
+	alert(e.target+'inner1')
+	console.log(e.currentTarget)
+}, false)
+inner2.addEventListener('click', function(e){
+	alert(e.target+'inner2')
+	console.log(e.currentTarget)
+}, false)
+inner3.addEventListener('click', function(e){
+	if (e.bubbles){
+		e.stopPropagation()
+	}
+	if (e.target && e.target.nodeName=='LI'){
+		alert(e.target.innerHTML)
+		console.log(e.currentTarget)
+	}
+}, false)
+</script>
+</html>
