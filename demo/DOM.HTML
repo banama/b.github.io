@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>BOM</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="ele" valasue="12" class="t1 t2">
+		F12
+		<p id="p1">p</p>
+	</div>
+</body>
+<script type="text/javascript">
+window.onload = function(){
+	var ele = document.getElementById('ele')
+	// alert(ele.firstChild.nodeValue)
+	var div = document.createElement('div')
+	// div.innerHTML = 'AS'
+	var text = document.createTextNode('AS')
+	div.appendChild(text)
+	ele.appendChild(div)
+
+	var insertdom = document.createElement('div')
+	var p = document.getElementById('p1')
+	insertdom.innerHTML = 'insert dom'
+	// ele.insertBefore(insertdom, p)
+	ele.replaceChild(insertdom, p)
+
+	var list = document.getElementById('ele').childNodes
+	// for(var i=0; i<list.length; i++){console.log(list[i])}
+
+	// alert(document.getElementById('ele').className)
+	// console.log(document.getElementById('ele').attributes[1])
+	// console.log(document.getElementById('ele').getAttribute('valasue'))
+
+}
+
+</script>
+</html>

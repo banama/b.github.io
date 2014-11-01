@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Object</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="out">
+		F12
+	</div>
+</body>
+<script type="text/javascript">
+var name = 'window'
+var obj = {
+	name : 'obj',
+	get : function(){
+		return function(){
+			return this.name
+		}
+	}
+}
+
+// alert(obj.get()())
+// alert(obj.get().call(obj))
+
+function out(count){
+	for(var i=0; i<count; i++){
+		console.log(i)
+	}
+
+	alert(i)
+}
+
+</script>
+</html>

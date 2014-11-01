@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Object</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="out">
+		F12
+	</div>
+</body>
+<script type="text/javascript">
+// function a(){this.origin = 'origin'}
+// a.prototype.first = 'first'
+// a.prototype.first_f = function(){console.log(this.first)}
+
+// function b(){}
+// b.prototype = new a()
+// // b.prototype.second = 'escond'
+// // b.prototype.second_f = function(){console.log(this.second)}
+
+
+// function c(){}
+// var te = new b()
+// c.prototype = te
+
+// t = new c()
+// alert(t.prototype == te)
+// for(var i in t){alert(i)}
+
+function Dog(){
+    this.wow = function(){
+		console.log('wow')
+    }
+    this.yelp = function(){
+		this.wow()
+	}
+}
+function MadDogA(time){
+	var self = this
+	this.time = time
+	this.yelp = function(){
+		setInterval(function(){
+			self.wow() // this === window
+		}, this.time)
+	}
+}
+
+function MadDogB(time){
+	var self = this
+	this.time = time
+	this.yelp = function(){
+		setInterval(function(){
+			console.log('haha')
+			self.wow() // this === window
+		}, 1000)
+	}
+}
+MadDogA.prototype = new Dog()
+MadDogB.prototype = new Dog()
+
+A = new MadDogA(500)
+B = new MadDogB(1000)
+A.yelp()
+B.yelp()
+</script>
+</html>

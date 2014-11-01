@@ -2,7 +2,7 @@
 def f(n):
 	a = 3
 	t = 3
-	m = 100
+	m = 0
 	while 1:
 		flag = 1
 		t += a
@@ -15,13 +15,13 @@ def f(n):
 			print a,t,flag
 			break
 		if flag >= m:
-			print a,t,flag
-			if m > n:
-				break
+			m = flag
+			print '----',m
 		a += 1
 
 
 f(500)
+#12375 76576500 576
 
 
 

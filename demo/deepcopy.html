@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>deepcopy</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="out">
+		F12
+	</div>
+</body>
+<script type="text/javascript">
+function f(){
+	this.a = 'a'
+	this.c = new Function('alert("c")')
+}
+f.prototype.b = 'b'
+f.prototype.d = function (){
+	console.log('pro ',this.b)
+}
+
+a1 = new f()
+b1 = new f()
+for(var i in a1){
+	console.log('1',i)
+}
+
+
+alert(a1.d === b1.d)
+
+console.log('origin obj')
+function deepcopy(obj){
+	var new_obj = {}
+	for(var key in obj){
+		if (typeof obj[key] !== Object){
+			new_obj[key] = obj[key]
+		}
+		else{
+			deepcopy(obj[key])
+		}
+	}
+	return new_obj
+}
+
+news = deepcopy(a1)
+console.log(news.prototype)
+</script>
+</html>

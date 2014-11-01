@@ -22,3 +22,11 @@ ul li {
 	list-style:initial;
 	padding: 2px;
 }
+
+img {
+	padding: 3px;
+	border: 1px solid #5cb85c;
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
