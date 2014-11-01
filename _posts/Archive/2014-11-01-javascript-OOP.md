@@ -1,4 +1,3 @@
-#
 ---
 layout: default_post
 title: javascript初入爱河
