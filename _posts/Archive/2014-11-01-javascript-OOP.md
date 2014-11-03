@@ -1,6 +1,6 @@
 ---
 layout: default_post
-title: javascript初入爱河
+title: Javascript初入爱河
 categories: Archive
 permalink: /Archive/javascript-OOP.html
 ---

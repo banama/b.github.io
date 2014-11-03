@@ -1,6 +1,6 @@
 ---
 layout: default_post
-title: java web环境配置和Servlet实例HelloWorld 
+title: Java web环境配置和Servlet实例HelloWorld 
 categories: Archive
 permalink: /Archive/servletFir.html
 ---
