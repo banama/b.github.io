@@ -1,6 +1,6 @@
 ---
 layout: default_post
-title: javabean实例及数据库点滴
+title: Javabean实例及数据库点滴
 categories: Archive
 permalink: /Archive/javabeanFir.html
 ---
