@@ -46,7 +46,7 @@ define(function(require, exports) {
                 var end = o.selectionEnd
                 var len = o.value.length
                 if (start == end){
-                    str = o.value.substr(0, start) + '**' + '斜体' + '**' + o.value.substr(end ,len - end)
+                    str = o.value.substr(0, start) + '*' + '斜体' + '*' + o.value.substr(end ,len - end)
                 }
                 else{
                     str = o.value.substr(0, start) + '*' + o.value.substr(start, end - start) + '*' + o.value.substr(end ,len - end)
