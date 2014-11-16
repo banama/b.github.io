@@ -19,7 +19,7 @@ permalink: /resume/index.html
 ##项目经验
 > [toPDF](http://topdfs.sinaapp.com)
 
-将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站(tornado)组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage和七牛云存储，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
+将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站(tornado)组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
 
 > [Simple-editor](https://github.com/banama/simple-editor) 
 
@@ -45,10 +45,12 @@ Python实现的一个简洁命令行翻译工具
 贡献代码的nodejs开源项目，npm镜像源管理工具
 
 ##其他(名词)
-* Linux用户 (Ubuntu / Fedora / CentOS)
+* MAC用户 (Linux用户 Ubuntu / Fedora / CentOS)
 * 版本管理/文档: Git、SVN / sphinx
 * js自动化测试: karma+jasmine
+* 前端框架 angualrjs
 * SAE / BAE平台经验
+* sass
 * 各种爬虫，实验室打杂
 * JAVA
  
