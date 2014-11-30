@@ -1,0 +1,299 @@
+p{
+    margin: 0px;
+    text-indent: 1em;
+    line-height: 1.1em;
+    font-size: 10px;
+    word-wrap: break-word;word-break:break-all;
+}
+
+p.note{
+    display: inline;
+    margin: 0px;
+    text-indent: 0;
+    line-height: 12px;
+    width: 103px;
+    word-wrap: break-word;word-break:break-all;
+    font-size: 10px;
+}
+
+.main{
+    width: 900px;
+    margin: auto;
+}
+
+.labj{
+    position: relative;
+    left: 0px;height: 600px;
+}
+
+
+.left{
+    width: 50%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.right{
+    width: 50%;
+    position: relative;
+    top: 0px;
+    left: 50%;
+}
+
+.bk-left {
+    width: 450px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.bk-right {
+    width: 450px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.content_left{
+    position: absolute;
+    width: 190px;
+    margin: 30px 10px 0px 25px;
+    top: 0%;
+    left: 0%;
+}
+.content_right{
+    position: absolute;
+    width: 190px;
+    margin: 30px 10px 0px 25px;
+
+    top: 0%;
+    left: 50%;
+}
+
+/*every_left*/
+.every_left{
+    position: relative;
+    margin: 10px 0px -20px 0px;
+}
+
+.every_right{
+    position: relative;
+    margin: 10px 0px -30px 0px;
+}
+
+.day_bk_left{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 60px;
+}
+
+.day_bk_right{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 60px;
+}
+
+.day_data_one{
+    width: 60px;
+    color: white;
+    position: relative;
+    top: 5px;
+    left:5px;
+    font-size: small;
+}
+
+.day_data_two{
+    width: 20px;
+    color: white;
+    position: relative;
+    top: 28px;
+    left:40px;
+    font-size: small;
+}
+
+.one_day_left{
+    position: relative;
+    left: 0px;
+    top: -40px;
+}
+
+.one_day_right{
+    position: relative;
+    left: 0px;
+    top: -40px;
+}
+
+.one_day_left_top{
+    width: 120px;
+    margin-left: 70px;
+    padding:14px 0px;
+    background-image:url('../png/one_day_bk_black_up.png'), url("");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.one_day_right_top{
+    width: 120px;
+    margin-left: 70px;
+    padding:14px 0px;
+    background-image:url('../png/one_day_bk_up.png'), url("");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.one_day_left_center{
+    text-indent: 1em;
+    width: 100px;
+    margin-left: 70px;
+    padding: 0px 10px;
+    background-image:url("../png/one_day_bk_black_center.png");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-clip: padding-box;
+}
+
+.one_day_right_center{
+    text-indent: 1em;
+    width: 100px;
+    margin-left: 70px;
+    padding: 0px 10px;
+    background-image:url("../png/one_day_bk_center.png");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-clip: padding-box;
+}
+
+.one_day_left_down{
+    width: 119px;
+    margin-left: 70px;
+    padding:18px 0px;
+    background-image:url("../png/one_day_bk_black_down.png");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.one_day_right_down{
+    width: 119px;
+    margin-left: 70px;
+    padding:18px 0px;
+    background-image:url("../png/one_day_bk_down.png");
+    background-position: 0% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.one_day_right{
+    float: left;
+    width: 90px;
+    margin-left: 10px;
+    padding: 10px;
+    background-image: url("../png/one_day_bk_black_center.png");
+    background-position: 0px 30px;
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+/*mark*/
+.mark{
+    background: rgb(238, 240, 239);
+    padding: 0px 10px 10px 10px;
+    width: 170px;
+    margin: 10px 0px 20px 0px;
+}
+
+.mark_img{
+    position: relative;
+    top: -7px;
+    width: 60px;
+}
+
+/*resource*/
+.avatar{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+.emotion{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.resource_info{
+    position: relative;
+    top: -25px;
+    left: 20px;
+    width: 125px;
+    padding: 15px 15px 15px 30px;
+    background: rgb(238, 240, 239);
+    z-index: -1;
+}
+
+.note_time{
+    /*position: relative;*/
+    width: 10px;
+    height: 10px;
+}
+
+.note_location{
+    /*position: relative;*/
+
+    width: 15px;
+    height: 15px;
+}
+
+.note_content{
+    padding: 10px;
+}
+
+.note_image{
+    width: 178px;
+    padding: 5px;
+    border: 1px solid rgb(238, 240, 239);
+    margin: 10px 0px;
+}
+
+.note_audio{
+    margin: 10px 0px;
+    width: 190px;
+}
+
+.note_video{
+    width: 178px;
+    height: 178px;
+    padding: 5px;
+    border: 1px solid rgb(238, 240, 239);
+    margin: 10px 0px;
+}
+
+/*resource_one*/
+.resource_one{
+    position: relative;
+    margin: 10px 0px -20px 0px;
+}
+
+.resource{
+    position: relative;
+    margin: 0px 0px 10px 0px;
+}

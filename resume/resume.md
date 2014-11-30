@@ -51,9 +51,10 @@ Python实现的一个简洁命令行翻译工具
 * 前端框架 angualrjs
 * SAE / BAE平台经验
 * sass
+* seajs
 * 各种爬虫，实验室打杂
 * JAVA
- 
+
 
 ##联系我
 * cellphone 18073278582

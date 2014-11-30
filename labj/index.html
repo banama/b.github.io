@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="main">
+</div>
+<script src="bower_components/seajs/dist/sea.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        base: "./",
+        alias: {
+            "jquery": "bower_components/jquery/dist/jquery.js",
+            "dumpdata": "lib/dumbdata"
+        }
+    })
+
+    seajs.use("./src/init")
+</script>
+</body>
+</html>
