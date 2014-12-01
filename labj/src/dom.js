@@ -105,7 +105,7 @@ define(function(require, exports) {
             }
 
             var _ = "<div class='resource_one'>" +
-                    "<img src='https://avatars1.githubusercontent.com/u/5638737?v=3&s=460' class='avatar'>" +
+                    "<img src='png/avatar.png' class='avatar'>" +
                     "<img src='" + _emotion + "' class='emotion'>" +
                     "<div class='resource_info_" + direct + "'>" + d +
                     "<img src='png/feed_note_time.png' class='note_time'>" +
