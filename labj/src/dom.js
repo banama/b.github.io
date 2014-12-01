@@ -72,8 +72,8 @@ define(function(require, exports) {
 
         // 笔记的头部，心情、地点、时间等信息
         Dom.prototype.noteTop = function (data, direct) {
-
-            var _emotion = data[0];
+            var _gender = "avatar_" + data[0];
+            var _emotion = data[1];
             switch (_emotion){
                 case 0:
                     _emotion = "png/mood_smile@2x.png";
@@ -98,18 +98,18 @@ define(function(require, exports) {
             }
 
             var d = "";
-            if (data.length === 3) {
+            if (data.length === 4) {
                 d = "<img src='png/feed_note_location.png' class='note_location'>" +
-                    "<p class='note'>" + data[2] + "</p>" +
+                    "<p class='note'>" + data[3] + "</p>" +
                     "<div class='paddings_10'></div>";
             }
 
             var _ = "<div class='resource_one'>" +
-                    "<img src='png/avatar.png' class='avatar'>" +
+                    "<img src='png/" + _gender + ".png' class='avatar'>" +
                     "<img src='" + _emotion + "' class='emotion'>" +
                     "<div class='resource_info_" + direct + "'>" + d +
                     "<img src='png/feed_note_time.png' class='note_time'>" +
-                    "<p class='note'>" + data[1] + "</p>" +
+                    "<p class='note'>" + data[2] + "</p>" +
                     "</div>";
 
             return _;

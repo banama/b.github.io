@@ -114,7 +114,15 @@ define(function(require){
         Labj.prototype.preNote = function (parma) {
             var self = this;
             var data_top = [];
+            var gender;
             var d;
+            if (parma.gender === 1) {
+                gender = "one";
+            }
+            else {
+                gender = "two";
+            }
+            data_top.push(gender);
             data_top.push(parma.content.extra.emotion);
             data_top.push(" " + parma.date.split(":")[0] + ":" + parma.date.split(":")[1]);
             if ("location_name" in parma.content.extra) {
