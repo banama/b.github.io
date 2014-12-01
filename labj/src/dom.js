@@ -4,7 +4,6 @@
 define(function(require, exports) {
 
     var $ = require('jquery');
-
     var Doms = (function () {
 
         function Dom() {
@@ -15,7 +14,7 @@ define(function(require, exports) {
                 'maxHeight': 560,
                 'page': 0,
                 'step': 0
-            }
+            };
 
             if(/Chrome/i.test(navigator.userAgent)) {
                 self.browser = 1;
@@ -39,9 +38,9 @@ define(function(require, exports) {
                     "<img class='bk-right' src='png/inpage_right_bk.png'>" +
                     "<div class='content_left'></div>" +
                     "<div class='content_right'></div>" +
-                    "</div>"
-            return _
-        }
+                    "</div>";
+            return _;
+        };
 
         // 每日一句
         Dom.prototype.every = function (direct, data) {
@@ -57,9 +56,9 @@ define(function(require, exports) {
                     "<p>" + data[3] + "</p></div></div>" +
                     "<div class='one_day_" + direct + "_down'></div>" +
                     "</div>" +
-                    "</div>"
-            return _
-        }
+                    "</div>";
+            return _;
+        };
 
         // 纪念日
         // TODO 纪念日日期的显示
@@ -67,17 +66,18 @@ define(function(require, exports) {
             var _ = "<div class='mark'>" +
                     "<img class='mark_img' src='png/favourite_day.png'>" +
                     "<p>" + data + "</p>" +
-                    "</div>"
-            return _
-        }
+                    "</div>";
+            return _;
+        };
 
         // 笔记的头部，心情、地点、时间等信息
         Dom.prototype.noteTop = function (data, direct) {
 
-            var _emotion = data[0]
+            var _emotion = data[0];
             switch (_emotion){
                 case 0:
                     _emotion = "png/mood_smile@2x.png";
+                    break;
                 case 1:
                     _emotion = "png/mood_anger@2x.png";
                     break;
@@ -95,14 +95,13 @@ define(function(require, exports) {
                     break;
                 default :
                     _emotion = "png/mood_smile@2x.png";
-                    break;
             }
 
             var d = "";
             if (data.length === 3) {
                 d = "<img src='png/feed_note_location.png' class='note_location'>" +
                     "<p class='note'>" + data[2] + "</p>" +
-                    "<div class='paddings_10'></div>"
+                    "<div class='paddings_10'></div>";
             }
 
             var _ = "<div class='resource_one'>" +
@@ -111,59 +110,59 @@ define(function(require, exports) {
                     "<div class='resource_info_" + direct + "'>" + d +
                     "<img src='png/feed_note_time.png' class='note_time'>" +
                     "<p class='note'>" + data[1] + "</p>" +
-                    "</div>"
+                    "</div>";
 
-            return _
-        }
+            return _;
+        };
 
         // 文本笔记
         Dom.prototype.noteContent = function (data) {
             var _ = "<div class='resource'>" +
-                    "<div class='note_content'><p>" + data + "</p></div></div>"
-            return _
-        }
+                    "<div class='note_content'><p>" + data + "</p></div></div>";
+            return _;
+        };
 
         // 描述，样式中我没有看到，所以预留下这个方法
         //TODO description
         Dom.prototype.noteDescription = function(data){
 
-        }
+        };
 
         // 图片笔记，多图处理也间接依赖这个方法。为了方便处理多图时判断
         // 是否overflow，所以每张图片为一块，文本视频，音频也是一样
         Dom.prototype.noteImage = function (url) {
-            var _ = "<div class='resource'><img class='note_image' src='" + url + "'></div>"
-            return _
-        }
+            var _ = "<div class='resource'><img class='note_image' src='" + url + "'></div>";
+            return _;
+        };
 
         // 音频笔记
         Dom.prototype.noteAudio = function (url) {
-            var _ = ""
+            var _ = "";
             if (self.browser  !== 2) {
-                var _ = "<div class='resource'>" +
+                _ = "<div class='resource'>" +
                         "<audio controls='controls' class='note_audio' >" +
                         "<source width='190' src='" + url + "' type='audio/mp3' />" +
                         "Your browser does not support this audio format." +
-                        "</audio></div>"
+                        "</audio></div>";
             }
-            return _
-        }
+            return _;
+        };
 
         // 视频笔记
         Dom.prototype.noteVideo = function(url){
-            var _ = ""
+            var _ = "";
             if (self.browser  !== 2) {
-                var _ = "<div class='resource'>" +
+                _ = "<div class='resource'>" +
                         "<video controls='controls' class='note_video' >" +
                         "<source src='" + url + "' type='video/mp4' />" +
                         "Your browser does not support the video tag." +
-                        "</video></div>"
+                        "</video></div>";
             }
-            return _
-        }
+            return _;
+        };
 
         return Dom;
-    })()
+    })();
 
     exports.Dom = Doms;
 

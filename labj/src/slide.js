@@ -8,9 +8,8 @@ define(function(require, exports) {
             var self = this;
         }
 
-        Slide.prototype.init(){
+        Slide.prototype.init = function(){
+        };
 
-        }
-
-    })()
-})
+    })();
+});
