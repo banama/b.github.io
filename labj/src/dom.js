@@ -49,6 +49,7 @@ define(function(require, exports) {
                     "<img src='png/day_bk_" + direct + ".png' class='day_bk_" + direct + "'>" +
                     "<div class='day_data_one'>" + data[0] + "<br>" + data[1] + "</div>" +
                     "<div class='day_data_two'>" + data[2] + "</div>" +
+                    "<div class='day_data_three_" + direct + "'>" + "相恋" + data[4] + "天" + "</div>" +
                     "<div class='one_day_left'>" +
                     "<div class='one_day_" + direct + "_top'></div>" +
                     "<div class='one_day_" + direct + "_center'>" +
@@ -71,7 +72,7 @@ define(function(require, exports) {
         }
 
         // 笔记的头部，心情、地点、时间等信息
-        Dom.prototype.noteTop = function (data) {
+        Dom.prototype.noteTop = function (data, direct) {
 
             var _emotion = data[0]
             switch (_emotion){
@@ -100,13 +101,14 @@ define(function(require, exports) {
             var d = "";
             if (data.length === 3) {
                 d = "<img src='png/feed_note_location.png' class='note_location'>" +
-                    "<p class='note'>" + data[2] + "</p>"
+                    "<p class='note'>" + data[2] + "</p>" +
+                    "<div class='paddings_10'></div>"
             }
 
             var _ = "<div class='resource_one'>" +
                     "<img src='https://avatars1.githubusercontent.com/u/5638737?v=3&s=460' class='avatar'>" +
                     "<img src='" + _emotion + "' class='emotion'>" +
-                    "<div class='resource_info'>" + d +
+                    "<div class='resource_info_" + direct + "'>" + d +
                     "<img src='png/feed_note_time.png' class='note_time'>" +
                     "<p class='note'>" + data[1] + "</p>" +
                     "</div>"

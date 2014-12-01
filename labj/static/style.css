@@ -16,6 +16,10 @@ p.note{
     font-size: 10px;
 }
 
+.paddings_10{
+    height: 10px;
+}
+
 .main{
     width: 900px;
     margin: auto;
@@ -75,12 +79,12 @@ p.note{
 /*every_left*/
 .every_left{
     position: relative;
-    margin: 10px 0px -20px 0px;
+    margin: 10px 0px -40px 0px;
 }
 
 .every_right{
     position: relative;
-    margin: 10px 0px -30px 0px;
+    margin: 10px 0px -40px 0px;
 }
 
 .day_bk_left{
@@ -117,16 +121,32 @@ p.note{
     font-size: small;
 }
 
+.day_data_three_left{
+    color: rgb(234, 86, 31);
+    position: relative;
+    top: 42px;
+    left:3px;
+    font-size: 12px;
+}
+
+.day_data_three_right{
+    color: rgb(88, 86, 87);
+    position: relative;
+    top: 42px;
+    left:3px;
+    font-size: 12px;
+}
+
 .one_day_left{
     position: relative;
     left: 0px;
-    top: -40px;
+    top: -49px;
 }
 
 .one_day_right{
     position: relative;
     left: 0px;
-    top: -40px;
+    top: -49px;
 }
 
 .one_day_left_top{
@@ -240,7 +260,7 @@ p.note{
     height: 20px;
 }
 
-.resource_info{
+.resource_info_left{
     position: relative;
     top: -25px;
     left: 20px;
@@ -250,17 +270,24 @@ p.note{
     z-index: -1;
 }
 
+.resource_info_right{
+    position: relative;
+    top: -25px;
+    left: 20px;
+    width: 125px;
+    padding: 15px 15px 15px 30px;
+    background: rgb(253, 237, 229);
+    z-index: -1;
+}
+
 .note_time{
-    /*position: relative;*/
     width: 10px;
     height: 10px;
 }
 
 .note_location{
-    /*position: relative;*/
-
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
 }
 
 .note_content{
