@@ -18,6 +18,7 @@ permalink: /resume/index.html
 
 ##项目经验
 > pageturn.js
+
 前端模仿图书翻页的效果(正在完善，详将github pageturn.js repo)
 
 > [toPDF](http://topdfs.sinaapp.com)
