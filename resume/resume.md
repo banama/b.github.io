@@ -17,6 +17,9 @@ permalink: /resume/index.html
 * Node.js
 
 ##项目经验
+> pageturn.js
+前端模仿图书翻页的效果(正在完善，详将github pageturn.js repo)
+
 > [toPDF](http://topdfs.sinaapp.com)
 
 将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站(tornado)组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
