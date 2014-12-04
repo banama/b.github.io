@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/style/style.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="src/pageturn.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="main">
+    <div class="pageturn" data-page=1>
+        <div class="left"><img src="static/image/1.jpg" class="img"></div>
+        <div class="right"><img src="static/image/2.jpg" class="img"></div>
+    </div>
+    <div class="pageturn" data-page=2>
+        <div class="left"><img src="static/image/1.jpg" class="img"></div>
+        <div class="right"><img src="static/image/2.jpg" class="img"></div>
+    </div>
+    <div class="pageturn" data-page=3>
+        <div class="left"><img src="static/image/1.jpg" class="img"></div>
+        <div class="right"><img src="static/image/2.jpg" class="img"></div>
+    </div>
+    <div class="pageturn" data-page=4>
+        <div class="left"><img src="static/image/1.jpg" class="img"></div>
+        <div class="right"><img src="static/image/2.jpg" class="img"></div>
+    </div>
+    <div class="one"></div>
+    <div class="two"></div>
+</div>
+<script type="text/javascript">
+    $(".main").pagetutrn({
+        speed: 1000,
+        loop: true
+//        autoPlay: true
+    })
+</script>
+
+</body>
+</html>
