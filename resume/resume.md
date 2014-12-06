@@ -17,9 +17,9 @@ permalink: /resume/index.html
 * Node.js
 
 ##项目经验
-> pageturn.js
+> [pageturn.js](https://github.com/banama/pageturn.js)
 
-前端模仿图书翻页的效果(正在完善，详将github pageturn.js repo)
+前端模仿图书翻页的效果jQuery插件 [Demo](http://pageturn.qiniudn.com/example)
 
 > [toPDF](http://topdfs.sinaapp.com)
 
