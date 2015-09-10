@@ -25,7 +25,7 @@ permalink: /resume/index.html
 
 将网页转化成PDF文件. 该项目由一个chrome插件和一个web网站(tornado)组成. 通过chrome插件截图网页传回服务器生成PDF文档，web网站部署在SAE,文件存储使用Storage，数据库使用 SAE KVDB. 简历右上角PDF简历下载即由此工具生成.
 
-> [Simple-editor](https://github.com/banama/simple-editor) 
+> [Simple-editor](https://github.com/banama/simple-editor)
 
 一个基于seajs、jquery和markdown-js实现的markdown编辑器
 
@@ -38,7 +38,7 @@ permalink: /resume/index.html
 
 > [janluo](https://github.com/banama/janluo)(未完成，待续)
 
-一个简单的SNS社区,采用flask框架和mongodb数据库 
+一个简单的SNS社区,采用flask框架和mongodb数据库
 
 > [CLT](https://github.com/banama/CLT)
 
