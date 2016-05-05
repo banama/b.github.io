@@ -1,5 +1,7 @@
 *~
 _site/*
+_posts/*
+d/*
 *.test
 .DS*
 

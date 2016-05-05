@@ -10,11 +10,18 @@ permalink: /resume/index.html
 * 本科 / 15.06毕业
 
 ##技能
-* Python
-* HTML / CSS / Bootstrap
-* MySQL / Redis
-* JavaScript / jQuery
-* Node.js
+* Python、nojdes(熟悉)
+* HTML / CSS(scss、stylus) / javscript(ES6)
+* 熟悉(vue.js、react.js、zepto)但不依赖框架
+* git、mysql、mongodb
+* 前端工程构建fis3、webpack
+* 熟悉require.js
+* mac、vim
+
+## 工作经验
+一年工作经验。负责公司产品无线端前端开发与优化。
+前端快速开发框架、性能优化规范、前端错误监控、以及组件化编写与维护。
+
 
 ##项目经验
 > [pageturn.js](https://github.com/banama/pageturn.js)
